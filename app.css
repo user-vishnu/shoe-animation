@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./images/shoe-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: back-ground 3s ease-in-out infinite alternate-reverse;
+}
+
+div {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  z-index: -1;
+  animation: disk 3s ease-in-out infinite alternate-reverse;
+}
+
+img {
+  height: 50vh;
+  animation: shoe 3s ease-in-out infinite;
+}
+
+@keyframes shoe {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes disk {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes back-ground {
+  0% {
+    background: #212121;
+    background-image: url(./images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  100% {
+    background: white;
+    background-image: url(./images/circle-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
